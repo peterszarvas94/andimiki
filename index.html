@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <title>Andi és Miki</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #e7edf3;
+      }
+
+      .images {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      img {
+        display: block;
+        max-width: min(1000px, calc((100vw - 6rem) / 2));
+        max-height: calc(100vh - 4rem);
+        height: auto;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 1300px) {
+        .images {
+          flex-direction: column;
+        }
+
+        img {
+          max-width: min(1000px, 100%);
+          max-height: none;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .images {
+          gap: 4px;
+          padding: 4px;
+        }
+
+        img {
+          max-width: min(1000px, 100%);
+          max-height: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="images">
+      <img src="img1.jpeg" alt="Image 1" />
+      <img src="img2.jpeg" alt="Image 2" />
+    </main>
+  </body>
+</html>
