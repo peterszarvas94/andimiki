@@ -4,62 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <title>Andi és Miki</title>
+    <title>Andi és Miki esküvője</title>
     <style>
       body {
+        position: relative;
         margin: 0;
         min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* background: #e7edf3; */
+        display: grid;
+        place-items: start center;
+        padding: 1.5rem 0;
+        box-sizing: border-box;
       }
 
-      .images {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        /* padding: 2rem; */
-        width: 100%;
-        box-sizing: border-box;
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: url("background.png") center / cover no-repeat;
+        filter: blur(5px);
+        z-index: -1;
       }
 
       img {
         display: block;
-        max-width: min(1000px, calc((100vw - 6rem) / 2));
-        max-height: calc(100vh - 4rem);
+        width: 100vw;
+        max-width: 640px;
         height: auto;
-        /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); */
-      }
-
-      @media (max-width: 1150px) {
-        .images {
-          flex-direction: column;
-        }
-
-        img {
-          max-width: min(800px, 100%);
-          max-height: none;
-        }
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+        position: relative;
+        z-index: 1;
       }
 
       @media (max-width: 640px) {
-        .images {
-          /* padding: 4px; */
-        }
-
-        img {
-          max-width: min(800px, 100%);
-          max-height: none;
+        body {
+          padding: 0;
         }
       }
     </style>
   </head>
   <body>
-    <main class="images">
-      <img src="img1.jpeg" alt="Image 1" />
-      <img src="img2.jpeg" alt="Image 2" />
-    </main>
+    <img src="meghivo.png" alt="Meghívó" />
   </body>
 </html>
