@@ -8,7 +8,7 @@ DRY_RUN="${1:-}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
-required_files=("index.html" "img1.jpeg" "img2.jpeg")
+required_files=("index.html" "meghivo.png" "background.png" "favicon.svg")
 upload_files=()
 
 for file in "${required_files[@]}"; do
