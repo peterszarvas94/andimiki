@@ -14,15 +14,33 @@
         place-items: start center;
         padding: 1.5rem 0;
         box-sizing: border-box;
-      }
 
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background: url("background.png") center / cover no-repeat;
-        filter: blur(5px);
-        z-index: -1;
+        &::before {
+          content: "";
+          position: fixed;
+          inset: 0;
+          background: url("background.png") center / cover no-repeat;
+          filter: blur(10px);
+          transform: scale(1.3) scaleX(-1) rotate(350deg);
+          opacity: 0.55;
+          z-index: -2;
+        }
+
+        &::after {
+          content: "";
+          position: fixed;
+          inset: 0;
+          background: url("background.png") center / cover no-repeat;
+          filter: blur(3px);
+          /* opacity: 0.75; */
+          z-index: -1;
+        }
+
+        @media (max-width: 640px) {
+          & {
+            padding: 0;
+          }
+        }
       }
 
       img {
@@ -33,12 +51,6 @@
         box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
         position: relative;
         z-index: 1;
-      }
-
-      @media (max-width: 640px) {
-        body {
-          padding: 0;
-        }
       }
     </style>
   </head>
