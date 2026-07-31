@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REMOTE="${REMOTE:-peti@shared}"
+REMOTE="${REMOTE:-peti@andiesmiki.hu}"
 REMOTE_DIR="${REMOTE_DIR:-/var/www/andiesmiki.hu}"
 DRY_RUN="${1:-}"
 
